@@ -1,3 +1,9 @@
 <resources>
-    <string name="app_name">practice</string>
+    <string name="app_name">Code Factory</string>
+    <string name="intro1_title">Learn anytime\n and anywhere</string>
+    <string name="intro2_title">Find a course for you</string>
+    <string name="intro3_title">Improve your skills</string>
+    <string name="intro1_text">Quarantine is the perfect time to spend your\n day learning something new, from anywhere!</string>
+    <string name="button_next">Next</string>
+    <string name="button_lets">Let’s Start</string>
 </resources>

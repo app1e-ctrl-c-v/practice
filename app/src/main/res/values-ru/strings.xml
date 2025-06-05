@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Code Factory</string>
+    <string name="intro1_title">Учитесь в любое время\n и в любом месте</string>
+    <string name="intro2_title">Найди курс для себя</string>
+    <string name="intro3_title">Улучшайте свои навыки</string>
+    <string name="intro1_text">Карантин — это идеальное время, чтобы провести день,\n изучая что-то новое, откуда угодно!</string>
+    <string name="button_next">Дальше</string>
+    <string name="button_lets">Начнем</string>
+</resources>
