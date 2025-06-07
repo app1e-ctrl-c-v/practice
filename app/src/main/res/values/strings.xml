@@ -6,4 +6,7 @@
     <string name="intro1_text">Quarantine is the perfect time to spend your\n day learning something new, from anywhere!</string>
     <string name="button_next">Next</string>
     <string name="button_lets">Let’s Start</string>
+    <string name="menu_courses">Courses</string>
+    <string name="menu_profile">Profile</string>
+    <string name="menu_setting">Setting</string>
 </resources>

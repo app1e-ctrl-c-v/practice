@@ -7,4 +7,7 @@
     <string name="intro1_text">Карантин — это идеальное время, чтобы провести день,\n изучая что-то новое, откуда угодно!</string>
     <string name="button_next">Дальше</string>
     <string name="button_lets">Начнем</string>
+    <string name="menu_courses">Курсы</string>
+    <string name="menu_profile">Профиль</string>
+    <string name="menu_setting">Настройки</string>
 </resources>
