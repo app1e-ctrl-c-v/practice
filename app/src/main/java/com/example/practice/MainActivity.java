@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         textTitle = findViewById(R.id.title_intro);
         imageIllistration = findViewById(R.id.image_icon);
         imageView = findViewById(R.id.image_draw);
-        Intent intent = new Intent(MainActivity.this, ProfileActivity.class);
+        Intent intent = new Intent(MainActivity.this, CoursesActivity.class);
         buttonNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
