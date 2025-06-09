@@ -25,6 +25,8 @@
         </activity>
         <activity android:name=".MainActivity"/>
         <activity android:name=".CoursesActivity"/>
+        <activity android:name=".SingInActivity"/>
+        <activity android:name=".SingUpActivity"/>
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />

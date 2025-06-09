@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:paddingTop="60dp"
+    android:orientation="vertical">
+
+    <ImageButton
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/go_back"
+        android:background="@drawable/button4"
+        android:id="@+id/button_cancel"
+        android:layout_marginLeft="20dp"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/image_illustration"
+        android:src="@drawable/illustration4"
+        android:layout_margin="15dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/rubik_medium"
+        android:text="@string/sign_up_title"
+        android:textSize="24sp"
+        android:textAlignment="center"
+        android:id="@+id/text_singup"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/rubik"
+        android:text="@string/create_account_link"
+        android:textSize="14sp"
+        android:textColor="@color/accent2"
+        android:textAlignment="center"
+        android:linksClickable="true"
+        android:layout_margin="10dp"
+        android:id="@+id/create_account_text"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button3"
+        android:hint="@string/name_edittext"
+        android:padding="18dp"
+        android:layout_margin="10dp"
+        android:textSize="14sp"
+        android:textColorHint="@color/accent2"
+        android:fontFamily="@font/rubik"
+        android:id="@+id/name_edittext" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button3"
+        android:hint="@string/email_edittext"
+        android:padding="18dp"
+        android:layout_margin="10dp"
+        android:textSize="14sp"
+        android:textColorHint="@color/accent2"
+        android:fontFamily="@font/rubik"
+        android:id="@+id/email_edittext" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/password_edittext"
+        android:textColorHint="@color/accent2"
+        app:passwordToggleTint="@color/accent2"
+        app:passwordToggleEnabled="true"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button3"
+            android:padding="18dp"
+            android:layout_margin="10dp"
+            android:textSize="14sp"
+            android:fontFamily="@font/rubik"
+            android:id="@+id/password_edittext"
+            android:maxLength="8"
+            android:inputType="textPassword" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button1"
+        android:text="@string/sign_up_title"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:textSize="16dp"
+        android:fontFamily="@font/rubik_medium"
+        android:padding="15dp"
+        android:layout_margin="10dp"
+        android:id="@+id/singup_button"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:text="@string/login_title"
+        android:textAllCaps="false"
+        android:textSize="16dp"
+        android:textColor="@color/accent2"
+        android:fontFamily="@font/rubik_medium"
+        android:id="@+id/login_button"/>
+
+
+
+
+
+</LinearLayout>

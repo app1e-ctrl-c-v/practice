@@ -32,6 +32,7 @@ android {
 }
 
 dependencies {
+    implementation (libs.material.vversion)
     implementation(libs.material)
     implementation(libs.appcompat)
     implementation(libs.material)
@@ -40,4 +41,5 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
+
 }

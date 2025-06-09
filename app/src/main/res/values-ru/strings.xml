@@ -10,4 +10,21 @@
     <string name="menu_courses">Курсы</string>
     <string name="menu_profile">Профиль</string>
     <string name="menu_setting">Настройки</string>
+    <string name="login_title">Авторизоваться</string>
+    <string name="sign_up_title">Зарегистрироваться</string>
+    <string name="pin_code_link">Войти через пин-код</string>
+    <string name="forgot_password_title">Забыли пароль?</string>
+    <string name="email_edittext">Email</string>
+    <string name="password_edittext">Пароль</string>
+    <string name="name_edittext">Имя</string>
+    <string name="create_account_link">Создать аккаунт</string>
+    <string name="enter_password_title">Введите свой адрес электронной почты, чтобы восстановить пароль</string>
+    <string name="send_button">Отправить</string>
+    <string name="back_button">Обратно</string>
+    <string name="change_title">Сменить пароль</string>
+    <string name="confirm_button">Подтвердить</string>
+    <string name="confirm_password_edittext">Подтвердите пароль</string>
+    <string name="change_code_title">Подтвердите изменения по коду</string>
+    <string name="code_title">Шестизначный код подтверждения был отправлен по электронной почте</string>
+    <string name="code_edittext">Код</string>
 </resources>

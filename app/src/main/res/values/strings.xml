@@ -9,6 +9,22 @@
     <string name="menu_courses">Courses</string>
     <string name="menu_profile">Profile</string>
     <string name="menu_setting">Setting</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="login_title">Log in</string>
+    <string name="sign_up_title">Sign up</string>
+    <string name="pin_code_link">Login with pin code</string>
+    <string name="forgot_password_title">Forgot Password?</string>
+    <string name="email_edittext">Email</string>
+    <string name="password_edittext">Password</string>
+    <string name="name_edittext">Name</string>
+    <string name="create_account_link">Create your account</string>
+    <string name="enter_password_title">Enter your email to recover your password</string>
+    <string name="send_button">Send</string>
+    <string name="back_button">Back</string>
+    <string name="change_title">Change password</string>
+    <string name="confirm_button">Confirm</string>
+    <string name="confirm_password_edittext">Confirm password</string>
+    <string name="change_code_title">Confirm changes by code</string>
+    <string name="code_title">A six-digit verification code has been sent by email</string>
+    <string name="code_edittext">Code</string>
+
 </resources>
