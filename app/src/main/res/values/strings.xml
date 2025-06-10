@@ -20,11 +20,22 @@
     <string name="enter_password_title">Enter your email to recover your password</string>
     <string name="send_button">Send</string>
     <string name="back_button">Back</string>
+    <string name="save_button">Save</string>
     <string name="change_title">Change password</string>
     <string name="confirm_button">Confirm</string>
     <string name="confirm_password_edittext">Confirm password</string>
     <string name="change_code_title">Confirm changes by code</string>
     <string name="code_title">A six-digit verification code has been sent by email</string>
     <string name="code_edittext">Code</string>
+    <string name="error_validation">The data entered is incorrect</string>
+    <string name="pin_code">Pin Code</string>
+    <string name="confirm_pin_code">Confirm pin code</string>
+    <string name="profile_courses">Your Courses</string>
+    <string name="profile_saves">Saved</string>
+    <string name="profile_payment">Payment</string>
+    <string name="logout_title">Log out</string>
+    <string name="notification_title">Notification</string>
+    <string name="account_title">Account information</string>
+    <string name="error_pin_code">Incorrect pin code</string>
 
 </resources>

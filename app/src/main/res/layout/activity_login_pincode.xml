@@ -4,23 +4,32 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/white"
-    android:paddingTop="100dp"
+    android:paddingTop="60dp"
     android:orientation="vertical">
+
+    <ImageButton
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/go_back"
+        android:background="@drawable/button4"
+        android:id="@+id/button_cancel"
+        android:layout_marginLeft="20dp"/>
+
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/image_illustration"
-        android:src="@drawable/illustration3"
-        android:layout_margin="20dp"/>
+        android:src="@drawable/illustration6"
+        android:layout_margin="15dp"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fontFamily="@font/rubik_medium"
-        android:text="@string/login_title"
+        android:text="@string/pin_code"
         android:textSize="24sp"
         android:textAlignment="center"
-        android:id="@+id/text_login"/>
+        android:id="@+id/text_singup"/>
 
     <TextView
         android:layout_width="match_parent"
@@ -32,74 +41,56 @@
         android:textAlignment="center"
         android:linksClickable="true"
         android:layout_margin="10dp"
-        android:id="@+id/login_pincode_text"/>
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/button3"
-        android:hint="@string/email_edittext"
-        android:padding="18dp"
-        android:layout_margin="10dp"
-        android:textSize="14sp"
-        android:textColorHint="@color/accent2"
-        android:fontFamily="@font/rubik"
-        android:id="@+id/email_edittext" />
+        android:id="@+id/create_account_text"/>
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/password_edittext"
+        android:hint="@string/pin_code"
         android:textColorHint="@color/accent2"
         app:passwordToggleTint="@color/accent2"
         app:passwordToggleEnabled="true"
         >
-       <com.google.android.material.textfield.TextInputEditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/button3"
-        android:padding="18dp"
-        android:layout_margin="10dp"
-        android:textSize="14sp"
-        android:fontFamily="@font/rubik"
-        android:id="@+id/password_edittext"
-        android:maxLength="20"
-        android:inputType="textPassword" />
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button3"
+            android:padding="18dp"
+            android:layout_margin="10dp"
+            android:textSize="14sp"
+            android:fontFamily="@font/rubik"
+            android:id="@+id/pincode_edittext"
+            android:maxLength="4"
+            android:inputType="numberPassword" />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/forgot_passwors_text"
-        android:fontFamily="@font/rubik"
-        android:text="@string/forgot_password_title"
-        android:textSize="14sp"
-        android:textColor="@color/accent2"
-        android:textAlignment="center"
-        android:linksClickable="true"
-        android:layout_margin="10dp"/>
+<View
+    android:layout_width="match_parent"
+    android:layout_height="180dp"
+    android:background="@color/white"
+    />
     <androidx.appcompat.widget.AppCompatButton
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/button1"
-        android:text="@string/login_title"
+        android:text="@string/sign_up_title"
         android:textColor="@color/white"
         android:textAllCaps="false"
         android:textSize="16dp"
         android:fontFamily="@font/rubik_medium"
         android:padding="15dp"
         android:layout_margin="10dp"
-        android:id="@+id/login_button"/>
+        android:id="@+id/singup_button"/>
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/white"
-        android:text="@string/sign_up_title"
+        android:text="@string/login_title"
         android:textAllCaps="false"
         android:textSize="16dp"
         android:textColor="@color/accent2"
         android:fontFamily="@font/rubik_medium"
-        android:id="@+id/singup_button"/>
+        android:id="@+id/login_button"/>
 
 
 

@@ -21,10 +21,21 @@
     <string name="enter_password_title">Введите свой адрес электронной почты, чтобы восстановить пароль</string>
     <string name="send_button">Отправить</string>
     <string name="back_button">Обратно</string>
+    <string name="save_button">Сохранить</string>
     <string name="change_title">Сменить пароль</string>
     <string name="confirm_button">Подтвердить</string>
     <string name="confirm_password_edittext">Подтвердите пароль</string>
     <string name="change_code_title">Подтвердите изменения по коду</string>
     <string name="code_title">Шестизначный код подтверждения был отправлен по электронной почте</string>
     <string name="code_edittext">Код</string>
+    <string name="error_validation">Не верно введены данные</string>
+    <string name="pin_code">Пин код</string>
+    <string name="confirm_pin_code">Подтвердите пин код</string>
+    <string name="profile_courses">Ваши курсы</string>
+    <string name="profile_saves">Сохраненные</string>
+    <string name="profile_payment">Платеж</string>
+    <string name="logout_title">Выйти из аккаунта</string>
+    <string name="notification_title">Уведомления</string>
+    <string name="account_title">Информация о аккаунте</string>
+    <string name="error_pin_code">неверный пин код</string>
 </resources>

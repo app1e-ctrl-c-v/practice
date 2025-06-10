@@ -32,6 +32,9 @@ android {
 }
 
 dependencies {
+    implementation(libs.okhttp)
+    implementation(libs.gson)
+    implementation(libs.glide)
     implementation (libs.material.vversion)
     implementation(libs.material)
     implementation(libs.appcompat)
