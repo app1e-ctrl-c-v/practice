@@ -1,8 +1,12 @@
 package com.example.practice;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.TextView;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
@@ -12,6 +16,18 @@ public class SecondFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_second, container, false);
+        View view = inflater.inflate(R.layout.fragment_second, container, false);
+        final TextView textLogOut = view.findViewById(R.id.log_out_text);
+        View.OnClickListener onClickListener = new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(view.getId() == R.id.log_out_text) {
+                    Intent intent = new Intent(SecondFragment.this.getActivity(), SingInActivity.class);
+                    startActivity(intent);
+                }
+            }
+        };
+        textLogOut.setOnClickListener (onClickListener);
+        return view;
     }
 }

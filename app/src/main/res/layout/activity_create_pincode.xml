@@ -7,11 +7,10 @@
     android:paddingTop="60dp"
     android:orientation="vertical">
 
-    <ImageButton
+    <androidx.appcompat.widget.AppCompatButton
         android:layout_width="48dp"
         android:layout_height="48dp"
-        android:src="@drawable/go_back"
-        android:background="@drawable/button4"
+        android:background="@drawable/button5"
         android:id="@+id/button_cancel"
         android:layout_marginLeft="20dp"/>
 

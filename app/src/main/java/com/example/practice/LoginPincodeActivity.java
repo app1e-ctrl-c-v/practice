@@ -19,7 +19,6 @@ public class LoginPincodeActivity extends AppCompatActivity {
     Button singupButton, singinButton;
     ImageButton backButton;
     Intent intent;
-    SharedPreferences preferences = getSharedPreferences("pin_code", Context.MODE_PRIVATE);
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,18 +28,25 @@ public class LoginPincodeActivity extends AppCompatActivity {
         singinButton = findViewById(R.id.login_button);
         singupButton = findViewById(R.id.singup_button);
         backButton = findViewById(R.id.button_cancel);
-        int pin_code = preferences.getInt("code", 0);
+        singupButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                SharedPreferences sharedPreferences = getSharedPreferences("app_preferences", MODE_PRIVATE);
+                String save_pin_code = sharedPreferences.getString("pin_code", "");
+            if(pincodeText.length() == 4){
+                String pin_code = pincodeText.getText().toString();
+                if(pin_code.equals(save_pin_code)){
+                    intent = new Intent(LoginPincodeActivity.this, CoursesActivity.class);
+                    startActivity(intent);
+                }else Toast.makeText(getApplicationContext(), getResources().getText(R.string.error_pin_code), Toast.LENGTH_LONG).show();
+            } else Toast.makeText(getApplicationContext(), getResources().getText(R.string.error_validation), Toast.LENGTH_LONG).show();
+            }
+        });
         singinButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(isPinCode(pincodeText.getText().toString())){
-                    int code = Integer.parseInt(pincodeText.getText().toString());
-                    if(code == pin_code){
-                        intent = new Intent(LoginPincodeActivity.this, SingInActivity.class);
-                        startActivity(intent);
-                    }
-                    else Toast.makeText(getApplicationContext(), getResources().getText(R.string.error_pin_code), Toast.LENGTH_LONG).show();
-                } else Toast.makeText(getApplicationContext(), getResources().getText(R.string.error_validation), Toast.LENGTH_LONG).show();
+                intent = new Intent(LoginPincodeActivity.this, SingInActivity.class);
+                startActivity(intent);
             }
         });
         backButton.setOnClickListener(new View.OnClickListener() {

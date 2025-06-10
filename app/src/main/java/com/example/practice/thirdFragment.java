@@ -30,21 +30,10 @@ public class thirdFragment extends Fragment {
         View.OnClickListener onClickListener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(view.getId() == R.id.button_setting) {
-                } else{
-                    if(view.getId() == R.id.button_setting1) {
-                    } else{
-                        if(view.getId() == R.id.button_setting2) {
-                            Intent intent = new Intent(thirdFragment.this.getActivity(), ForgotPasswordActivity.class);
-                            startActivity(intent);
-                        } else{
-                            if(view.getId() == R.id.button_setting3) {
-                                Intent intent = new Intent(thirdFragment.this.getActivity(), ChangePinCodeActivity.class);
-                                startActivity(intent);
-                            }
-                        }
-                    }
-                }
+                if(view.getId() == R.id.button_setting3) {
+                    Intent intent = new Intent(thirdFragment.this.getActivity(), ChangePinCodeActivity.class);
+                    startActivity(intent);
+               }
             }
         };
         buttonName.setOnClickListener (onClickListener);

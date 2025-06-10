@@ -54,7 +54,7 @@ public class SingUpActivity  extends AppCompatActivity {
         return EMAIL_ADDRESS_PATTERN.matcher(email).matches();
     }
     public boolean isPassword(CharSequence target) {
-        return (!TextUtils.isEmpty(target) && target.length()<8);
+        return (!TextUtils.isEmpty(target) && target.length()>8 && target.length()<20);
     }
     public boolean isName(CharSequence target) {
         return (!TextUtils.isEmpty(target)&& target.length()<20);

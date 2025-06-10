@@ -2,7 +2,9 @@ package com.example.practice;
 
 import static androidx.core.content.ContextCompat.startActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Patterns;
@@ -25,7 +27,6 @@ public class SingInActivity  extends AppCompatActivity {
     EditText editTextEmail, editTextPassword;
     Intent intent;
     TextView pincodeText;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,8 +40,15 @@ public class SingInActivity  extends AppCompatActivity {
         pincodeText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                SharedPreferences sharedPreferences = getSharedPreferences("app_preferences", MODE_PRIVATE);
+                boolean booleanValue = sharedPreferences.getBoolean("presence of pin code", false);
+            if(booleanValue){
                 intent = new Intent(SingInActivity.this, LoginPincodeActivity.class);
                 startActivity(intent);
+            } else{
+                intent = new Intent(SingInActivity.this, ChangePinCodeActivity.class);
+                startActivity(intent);
+            }
             }
         });
         buttonSingUp.setOnClickListener(new View.OnClickListener() {
