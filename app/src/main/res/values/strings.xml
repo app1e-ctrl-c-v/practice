@@ -37,5 +37,10 @@
     <string name="notification_title">Notification</string>
     <string name="account_title">Account information</string>
     <string name="error_pin_code">Incorrect pin code</string>
+    <string name="hello">Hello,</string>
+    <string name="category">Category:</string>
+    <string name="hour">h</string>
+    <string name="minute">min</string>
+    <string name="search">Search course</string>
 
 </resources>

@@ -47,7 +47,7 @@ public class ChangePinCodeActivity extends AppCompatActivity {
                         editor.putBoolean("presence of pin code", true);
                         editor.putString("pin_code", pincodeEdit.getText().toString()   );
                         editor.apply();
-                        intent = new Intent(ChangePinCodeActivity.this, SingInActivity.class);
+                        intent = new Intent(ChangePinCodeActivity.this, CoursesActivity.class);
                         startActivity(intent);
                     } else Toast.makeText(getApplicationContext(), getResources().getText(R.string.error_pin_code), Toast.LENGTH_LONG).show();
                 } else Toast.makeText(getApplicationContext(), getResources().getText(R.string.error_validation), Toast.LENGTH_LONG).show();

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="343dp"
+    android:layout_height="297dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/button3"
+    android:layout_marginBottom="10dp">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="194dp"
+        android:src="@drawable/course_image"
+        android:id="@+id/courses_image"
+        android:background="@drawable/button3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+    <TextView
+        android:layout_width="63dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button6"
+        android:text="$ 50"
+        android:textSize="14sp"
+        android:textAlignment="center"
+        android:fontFamily="@font/rubik_medium"
+        android:textColor="@color/white"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/courses_image"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="10dp"
+        android:id="@+id/price_courses"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3 h 34 min"
+        android:id="@+id/duration"
+        android:fontFamily="@font/rubik_medium"
+        android:textSize="12sp"
+        android:textColor="#5BA092"
+        app:layout_constraintTop_toBottomOf="@id/courses_image"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="UI"
+        android:textSize="24sp"
+        android:fontFamily="@font/rubik_medium"
+        app:layout_constraintTop_toBottomOf="@+id/duration"
+        android:id="@+id/title_courses"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Advanced mobile interface design"
+        android:textSize="14sp"
+        android:fontFamily="@font/rubik"
+        app:layout_constraintTop_toBottomOf="@+id/title_courses"
+        android:id="@+id/short_description_courses"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="10dp"/>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -46,8 +46,7 @@ public class SingInActivity  extends AppCompatActivity {
                 intent = new Intent(SingInActivity.this, LoginPincodeActivity.class);
                 startActivity(intent);
             } else{
-                intent = new Intent(SingInActivity.this, ChangePinCodeActivity.class);
-                startActivity(intent);
+                Toast.makeText(getApplicationContext(), getResources().getText(R.string.error_pin_code), Toast.LENGTH_LONG).show();
             }
             }
         });
@@ -61,11 +60,11 @@ public class SingInActivity  extends AppCompatActivity {
         buttonSingIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(isValidEmail(editTextEmail.getText().toString()) && isPassword(editTextPassword.getText())){
+//                if(isValidEmail(editTextEmail.getText().toString()) && isPassword(editTextPassword.getText())){
                     intent = new Intent(SingInActivity.this, CoursesActivity.class);
                     startActivity(intent);
 
-                } else Toast.makeText(getApplicationContext(), getResources().getText(R.string.error_validation), Toast.LENGTH_LONG).show();
+//                } else Toast.makeText(getApplicationContext(), getResources().getText(R.string.error_validation), Toast.LENGTH_LONG).show();
             }
         });
     }
