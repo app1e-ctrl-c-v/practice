@@ -23,6 +23,7 @@ import com.example.practice.Adapters.CategoryAdapter;
 import com.example.practice.Adapters.CoursesAdapters;
 import com.example.practice.Models.Category;
 import com.example.practice.Models.Courses;
+import com.example.practice.Models.Profile;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
@@ -42,10 +43,11 @@ public class FirstFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_blank, container, false);
         name_user = view.findViewById(R.id.name_user_title);
-        list_category = view.findViewById(R.id.list_category);
+//        list_category = view.findViewById(R.id.list_category);
         list_corses = view.findViewById(R.id.courses_list);
+        name_user.setText(Profile.getUsername());
         try {
-            getAllCategoty();
+//            getAllCategoty();
             getAllCourses();
         } catch (IOException e) {
             throw new RuntimeException(e);
