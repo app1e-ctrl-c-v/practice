@@ -19,6 +19,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.example.practice.Adapters.CategoryAdapter;
 import com.example.practice.Adapters.CoursesAdapters;
 import com.example.practice.Models.Category;
@@ -26,6 +27,9 @@ import com.example.practice.Models.Courses;
 import com.example.practice.Models.Profile;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.io.IOException;
 import java.lang.reflect.Type;
@@ -37,7 +41,6 @@ public class FirstFragment extends Fragment {
     TextView name_user;
     RecyclerView list_corses, list_category;
     SupabaseClient supabaseClient = new SupabaseClient();
-
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -45,9 +48,9 @@ public class FirstFragment extends Fragment {
         name_user = view.findViewById(R.id.name_user_title);
 //        list_category = view.findViewById(R.id.list_category);
         list_corses = view.findViewById(R.id.courses_list);
-        name_user.setText(Profile.getUsername());
         try {
 //            getAllCategoty();
+            getUser();
             getAllCourses();
         } catch (IOException e) {
             throw new RuntimeException(e);
@@ -101,6 +104,34 @@ public class FirstFragment extends Fragment {
                         CategoryAdapter categoryAdapter = new CategoryAdapter(category, getContext());
                         list_corses.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
                         list_corses.setAdapter(categoryAdapter);
+                    }
+                });
+            }
+        });
+    }
+
+    private void getUser() throws IOException {
+        supabaseClient.fetchUser(new SupabaseClient.SBC_Callback() {
+            @Override
+            public void onFailure(IOException e) {
+                getActivity().runOnUiThread(() -> {
+                    Log.e("getAllOrders: onFailure", e.getLocalizedMessage());
+                });
+            }
+
+            @Override
+            public void onResponse(String responseBody) {
+                getActivity().runOnUiThread(() -> {
+                    Log.e("getAllOrders: onResponse", responseBody);
+                    if (isAdded() && getContext() != null) {
+                        Gson gson = new Gson();
+                        Type type = new TypeToken<List<Profile>>() {
+                        }.getType();
+                        List<Profile> profiles = gson.fromJson(responseBody, type);
+                        if (profiles != null && !profiles.isEmpty()) {
+                            Profile profile = profiles.get(0);
+                            name_user.setText(profile.getUsername());
+                        }
                     }
                 });
             }

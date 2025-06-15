@@ -43,4 +43,7 @@
     <string name="hour">ч</string>
     <string name="minute">мин</string>
     <string name="search">Поиск курса</string>
+    <string name="otp_code_text">ОТР код:</string>
+    <string name="otp_code_title">ОТР код для восстановления пароля:</string>
+    <string name="send_email">Отправка письма...</string>
 </resources>

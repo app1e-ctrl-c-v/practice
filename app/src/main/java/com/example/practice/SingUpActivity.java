@@ -71,8 +71,8 @@ public class SingUpActivity  extends AppCompatActivity {
                     email = editTextEmail.getText().toString();
                     password = editTextPassword.getText().toString();
                     name = editTextName.getText().toString();
-                    Profile.setUsername(name);
                 new SingUpTask().execute("");
+                new UpdateProfile().execute("");
                 intent = new Intent(SingUpActivity.this, CoursesActivity.class);
                     startActivity(intent);
                 } else Toast.makeText(getApplicationContext(), getResources().getText(R.string.error_validation), Toast.LENGTH_LONG).show();
@@ -134,55 +134,43 @@ public class SingUpActivity  extends AppCompatActivity {
                     uuidUser = user.getString("id");
                     saveUuidUser(uuidUser);
                     saveBearerToken(bearerToken);
-                    Profile.saveId(uuidUser);
-
 
                 } catch (JSONException e) {
                     throw new RuntimeException(e);
                 }
         }
     }
-//    class UpdateProfile extends AsyncTask<String, Void, String> {
-//
-//        @Override
-//        protected String doInBackground(String... strings) {
-//            MediaType mediaType = MediaType.parse("application/json");
-//            OkHttpClient client = new OkHttpClient().newBuilder()
-//                    .build();
-//            RequestBody body = RequestBody.create(mediaType, "{\n  \"email\": \"" + email + "\",\n  \"password\": \"" + password + "\"\n}");
-//            Request request = new Request.Builder()
-//                    .url("https://psziqhddgczahqmabysn.supabase.co/auth/v1/signup")
-//                    .method("POST", body)
-//                    .addHeader("apikey", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBzemlxaGRkZ2N6YWhxbWFieXNuIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDk2NDI4MjMsImV4cCI6MjA2NTIxODgyM30.9K9LKwhWx4pcOis5Ta7zVfTLXrRg3IdOOahUTwsolQA")
-//                    .addHeader("Content-Type", "application/json")
-//                    .build();
-//
-//            try{
-//                Response response = client.newCall(request).execute();
-//                if (!response.isSuccessful())
-//                    throw new IOException("Unexpected code" + response);
-//                return response.body().string();
-//            } catch (IOException e) {
-//                throw new RuntimeException(e);
-//            }
-//        }
-//
-//        @Override
-//        protected void onPostExecute(String answer) {
-//            try {
-//                JSONObject profilies = new JSONObject(answer);
-//                bearerToken = profilies.getString("access_token");
-//                JSONObject user = profilies.getJSONObject("user");
-//                uuidUser = user.getString("id");
-//                saveUuidUser(uuidUser);
-//                saveBearerToken(bearerToken);
-//                Profile.saveId(uuidUser);
-//
-//            } catch (JSONException e) {
-//                throw new RuntimeException(e);
-//            }
-//        }
-//    }
+
+    class UpdateProfile extends AsyncTask<String, Void, String> {
+
+        @Override
+        protected String doInBackground(String... strings) {
+            OkHttpClient client = new OkHttpClient().newBuilder()
+                    .build();
+            MediaType mediaType = MediaType.parse("application/json");
+            RequestBody body = RequestBody.create(mediaType, "{ \"username\": \""+name+"\" }");
+            Request request = new Request.Builder()
+                    .url("https://psziqhddgczahqmabysn.supabase.co/rest/v1/profiles?id=eq."+DataBinding.getUuidUser())
+                    .method("PATCH", body)
+                    .addHeader("apikey", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBzemlxaGRkZ2N6YWhxbWFieXNuIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDk2NDI4MjMsImV4cCI6MjA2NTIxODgyM30.9K9LKwhWx4pcOis5Ta7zVfTLXrRg3IdOOahUTwsolQA")
+                    .addHeader("Authorization", "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBzemlxaGRkZ2N6YWhxbWFieXNuIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDk2NDI4MjMsImV4cCI6MjA2NTIxODgyM30.9K9LKwhWx4pcOis5Ta7zVfTLXrRg3IdOOahUTwsolQA")
+                    .addHeader("Content-Type", "application/json")
+                    .addHeader("Prefer", "return=minimal")
+                    .build();
+            try{
+                Response response = client.newCall(request).execute();
+                if (!response.isSuccessful())
+                    throw new IOException("Unexpected code" + response);
+                return response.body().string();
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        }
+
+        @Override
+        protected void onPostExecute(String answer) {
+        }
+    }
 
 
         //    private void postSingUp() throws IOException {

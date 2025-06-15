@@ -32,6 +32,7 @@ android {
 }
 
 dependencies {
+    implementation(libs.android.mail);
     implementation(libs.okhttp)
     implementation(libs.gson)
     implementation(libs.glide)

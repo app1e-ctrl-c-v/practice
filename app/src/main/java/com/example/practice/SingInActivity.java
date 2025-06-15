@@ -42,7 +42,7 @@ public class SingInActivity  extends AppCompatActivity {
     Button buttonSingUp, buttonSingIn;
     EditText editTextEmail, editTextPassword;
     Intent intent;
-    TextView pincodeText;
+    TextView pincodeText, forgotpasswordText;
     String email, password, name, bearerToken, uuidUser;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +54,14 @@ public class SingInActivity  extends AppCompatActivity {
         editTextPassword = findViewById(R.id.password_edittext);
         editTextEmail = findViewById(R.id.email_edittext);
         pincodeText = findViewById(R.id.login_pincode_text);
+        forgotpasswordText = findViewById(R.id.forgot_passwors_text);
+        forgotpasswordText.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                intent = new Intent(SingInActivity.this, ForgotPasswordActivity.class);
+                startActivity(intent);
+            }
+        });
         pincodeText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -80,10 +88,7 @@ public class SingInActivity  extends AppCompatActivity {
                 if(isValidEmail(editTextEmail.getText().toString()) && isPassword(editTextPassword.getText())){
                 email = editTextEmail.getText().toString();
                 password = editTextPassword.getText().toString();
-                    new LoginTask().execute("");
-                    intent = new Intent(SingInActivity.this, CoursesActivity.class);
-                    startActivity(intent);
-
+                new LoginTask().execute("");
                 } else Toast.makeText(getApplicationContext(), getResources().getText(R.string.error_validation), Toast.LENGTH_LONG).show();
             }
         });
@@ -122,18 +127,19 @@ public class SingInActivity  extends AppCompatActivity {
                 uuidUser = user.getString("id");
                 saveUuidUser(uuidUser);
                 saveBearerToken(bearerToken);
-                Profile.saveId(uuidUser);
+                intent = new Intent(SingInActivity.this, CoursesActivity.class);
+                startActivity(intent);
             } catch (JSONException e) {
                 throw new RuntimeException(e);
             }
         }
     }
 
-    private boolean isValidEmail(String email) {
-        return EMAIL_ADDRESS_PATTERN.matcher(email).matches();
-    }
     public boolean isPassword(CharSequence target) {
         return (!TextUtils.isEmpty(target) && target.length()>8 && target.length()<20);
+    }
+    private boolean isValidEmail(String email) {
+        return EMAIL_ADDRESS_PATTERN.matcher(email).matches();
     }
     public static final Pattern EMAIL_ADDRESS_PATTERN = Pattern.compile(
             "[a-zA-Z0-9\\+\\.\\_\\%\\-\\+]{1,256}" +

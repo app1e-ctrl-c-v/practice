@@ -29,6 +29,7 @@ public class CoursesActivity extends AppCompatActivity {
         bottomNavigationView.setOnNavigationItemSelectedListener(item -> {
             if(item.getItemId() == R.id.courses){
                 setCurrentFragment(firstFragment);
+
             } else {
                 if(item.getItemId() == R.id.profile)
                 {

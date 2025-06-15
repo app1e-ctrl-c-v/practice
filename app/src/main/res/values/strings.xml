@@ -42,5 +42,10 @@
     <string name="hour">h</string>
     <string name="minute">min</string>
     <string name="search">Search course</string>
+    <string name="otp_code_text">OTR code:</string>
+    <string name="otp_code_title">OTR code for password recovery:</string>
+    <string name="send_email">Sending a letter...</string>
+
+
 
 </resources>

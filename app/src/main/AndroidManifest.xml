@@ -29,6 +29,9 @@
         <activity android:name=".SingUpActivity"/>
         <activity android:name=".ChangePinCodeActivity"/>
         <activity android:name=".LoginPincodeActivity"/>
+        <activity android:name=".ForgotPasswordActivity"/>
+        <activity android:name=".OTPActivity"/>
+        <activity android:name=".ChangePasswordActivity"/>
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
