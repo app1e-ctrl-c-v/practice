@@ -45,6 +45,11 @@
     <string name="otp_code_text">OTR code:</string>
     <string name="otp_code_title">OTR code for password recovery:</string>
     <string name="send_email">Sending a letter...</string>
+    <string name="about_corses_title">About the courses</string>
+    <string name="duration_title">Duration</string>
+    <string name="add_cart_button">Add to cart</string>
+    <string name="save_courses_title">Save courses</string>
+    <string name="result_title">Results</string>
 
 
 

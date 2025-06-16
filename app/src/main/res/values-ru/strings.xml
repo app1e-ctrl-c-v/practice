@@ -46,4 +46,9 @@
     <string name="otp_code_text">ОТР код:</string>
     <string name="otp_code_title">ОТР код для восстановления пароля:</string>
     <string name="send_email">Отправка письма...</string>
+    <string name="about_corses_title">О курсе</string>
+    <string name="duration_title">Длительность</string>
+    <string name="add_cart_button">Добавить в корзину</string>
+    <string name="save_courses_title">Сохраненные курсы</string>
+    <string name="result_title">Результатов</string>
 </resources>

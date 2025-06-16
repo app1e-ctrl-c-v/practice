@@ -38,14 +38,18 @@
         app:layout_constraintTop_toTopOf="parent" />
 
 
-    <SearchView
+    <EditText
         android:id="@+id/search"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/button3"
         android:iconifiedByDefault="true"
-        android:padding="5dp"
-        android:queryHint="@string/search"
+        android:padding="15dp"
+        android:textSize="14sp"
+        android:clickable="true"
+        android:fontFamily="@font/rubik"
+        android:hint="@string/search"
+        android:drawableEnd="@drawable/search_icon"
         app:layout_constraintTop_toBottomOf="@id/name_user_title" />
 
     <LinearLayout
@@ -70,14 +74,18 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
             android:background="@drawable/button6"
-            android:padding="6dp">
+            android:paddingEnd="10dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:paddingStart="10dp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="  #"
+                android:text="#"
                 android:textColor="@color/white"
-                android:textSize="12sp" />
+                android:textSize="12sp"
+                />
 
             <TextView
                 android:id="@+id/name_category1"
@@ -85,7 +93,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
                 android:clickable="true"
-                android:text="  CSS  "
+                android:text="CSS"
                 android:textColor="@color/white"
                 android:textSize="12sp" />
         </FrameLayout>
@@ -94,13 +102,17 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
+            android:clickable="true"
             android:background="@drawable/button6"
-            android:padding="6dp">
+            android:paddingEnd="10dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:paddingStart="10dp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="  #"
+                android:text="#"
                 android:textColor="@color/white"
                 android:textSize="12sp" />
 
@@ -110,7 +122,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
                 android:clickable="true"
-                android:text="  UX  "
+                android:text="UX"
                 android:textColor="@color/white"
                 android:textSize="12sp" />
         </FrameLayout>
@@ -119,13 +131,17 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
+            android:clickable="true"
             android:background="@drawable/button6"
-            android:padding="6dp">
+            android:paddingEnd="10dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:paddingStart="10dp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="  #"
+                android:text="#"
                 android:textColor="@color/white"
                 android:textSize="12sp" />
 
@@ -135,7 +151,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
                 android:clickable="true"
-                android:text="  Swift  "
+                android:text="HTML"
                 android:textColor="@color/white"
                 android:textSize="12sp" />
 
@@ -145,13 +161,17 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
+            android:clickable="true"
             android:background="@drawable/button6"
-            android:padding="6dp">
+            android:paddingEnd="10dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:paddingStart="10dp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="  #"
+                android:text="#"
                 android:textColor="@color/white"
                 android:textSize="12sp" />
 
@@ -161,7 +181,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
                 android:clickable="true"
-                android:text="  UI  "
+                android:text="UI"
                 android:textColor="@color/white"
                 android:textSize="12sp" />
         </FrameLayout>

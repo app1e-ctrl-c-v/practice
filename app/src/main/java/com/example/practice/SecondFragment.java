@@ -81,6 +81,10 @@ public class SecondFragment extends Fragment {
             }
         };
         textLogOut.setOnClickListener (onClickListener);
+        buttonSaved.setOnClickListener (onClickListener);
+        buttonPayment.setOnClickListener (onClickListener);
+        buttonCourses.setOnClickListener (onClickListener);
+        buttonCancel.setOnClickListener (onClickListener);
         return view;
     }
 
