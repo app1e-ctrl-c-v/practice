@@ -127,6 +127,7 @@ public class SingInActivity  extends AppCompatActivity {
                 uuidUser = user.getString("id");
                 saveUuidUser(uuidUser);
                 saveBearerToken(bearerToken);
+                Profile.setEmail(email);
                 intent = new Intent(SingInActivity.this, CoursesActivity.class);
                 startActivity(intent);
             } catch (JSONException e) {

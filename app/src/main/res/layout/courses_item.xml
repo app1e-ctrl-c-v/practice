@@ -64,9 +64,4 @@
         android:id="@+id/short_description_courses"
         app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginLeft="10dp"/>
-
-
-
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>

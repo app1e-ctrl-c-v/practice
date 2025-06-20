@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="88dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/button3"
+    android:layout_marginBottom="10dp">
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/illustration14"
+        android:layout_margin="5dp"
+        android:id="@+id/image_theme"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/rubik_medium"
+        android:text="HTML"
+        android:id="@+id/theme_title"
+        android:textSize="24sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/image_theme"
+        android:layout_margin="10dp"/>
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:layout_width="222dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/theme_title"
+        app:layout_constraintLeft_toRightOf="@+id/image_theme"
+        android:layout_margin="10dp"
+        app:indicatorColor="@color/accent4"
+        app:trackColor="@color/accent5"
+        android:id="@+id/progress_theme"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

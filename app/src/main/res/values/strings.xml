@@ -50,6 +50,43 @@
     <string name="add_cart_button">Add to cart</string>
     <string name="save_courses_title">Save courses</string>
     <string name="result_title">Results</string>
+    <string name="delete_buton">Delete</string>
+    <string name="edit_button">Edit</string>
+    <string name="buy_button">Buy</string>
+    <string name="open_button">Open</string>
+    <string name="create_courses_title">Create a new courses</string>
+    <string name="name_course_title_custom">Enter the course name</string>
+    <string name="about_course_title_custom">About the course</string>
+    <string name="description_course_hint">Describe the course...</string>
+    <string name="course_title_custom">Custom Course</string>
+    <string name="add_lessons_button">Add a lessons</string>
+    <string name="upload_image_button">Upload image</string>
+    <string name="date_update">"Last update: "</string>
+    <string name="add_toast">Successfully saved!</string>
+    <string name="button_add_update">Saved</string>
+    <string name="buy_toast">Purchase successful!</string>
+    <string name="add_payplament_toast">Successful addition!</string>
+    <string name="button_lessons">Lessons</string>
+    <string name="button_tests">Tests</string>
+    <string name="button_discuss">Discuss</string>
+    <string name="title_lessons">Introduction</string>
+    <string name="of"> of </string>
+    <string name="lessons"> lessons</string>
+    <string name="number_quize">Quize</string>
+    <string name="begin_button">Begin</string>
+    <string name="continue_button">Continue</string>
+    <string name="incorrect_toast">Incorrect answer:</string>
+    <string name="correct_toast">Correct answer:</string>
+    <string name="passed">Test passed</string>
+    <string name="failed">Test failed</string>
+    <string name="write_comment">Write a comment...</string>
+    <string name="rating">Raiting</string>
+
+
+
+
+
+
 
 
 

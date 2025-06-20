@@ -31,6 +31,7 @@ import com.example.practice.Adapters.CategoryAdapter;
 import com.example.practice.Adapters.CoursesAdapters;
 import com.example.practice.Models.Category;
 import com.example.practice.Models.Courses;
+import com.example.practice.Models.CoursesStatic;
 import com.example.practice.Models.Profile;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -145,14 +146,14 @@ public class FirstFragment extends Fragment {
         onRecyclerViewItemClickListener = new CoursesAdapters.OnRecyclerViewItemClickListener() {
             @Override
             public void onClick(Courses courses, int position) {
-
+                CoursesStatic.setId(courses.getId());
+                CoursesStatic.setName(courses.getName());
+                CoursesStatic.setDescription(courses.getDescription());
+                CoursesStatic.setDuration(courses.getDuration());
+                CoursesStatic.setTitle(courses.getTitle());
+                CoursesStatic.setCover_name(courses.getCover_name());
+                CoursesStatic.setPrice(courses.getPrice());
                 intent = new Intent(FirstFragment.this.getActivity(), CoursesDetailActivity.class);
-                intent.putExtra("id", courses.getId());
-                intent.putExtra("name", courses.getName());
-                intent.putExtra("description", courses.getDescription());
-                intent.putExtra("duration", courses.getDuration());
-                intent.putExtra("price", courses.getPrice());
-                intent.putExtra("image", courses.getCover_name());
                 startActivity(intent);
             }
         };

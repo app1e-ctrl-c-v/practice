@@ -17,6 +17,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import com.bumptech.glide.Glide;
 import com.example.practice.Adapters.CategoryAdapter;
 import com.example.practice.Models.Category;
+import com.example.practice.Models.DataBinding;
 import com.example.practice.Models.Profile;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -59,7 +60,7 @@ public class SecondFragment extends Fragment {
                     startActivity(intent);
                 } else {
                     if(view.getId() == R.id.button_cancel) {
-                        Intent intent = new Intent(SecondFragment.this.getActivity(), FirstFragment.class);
+                        Intent intent = new Intent(SecondFragment.this.getActivity(), CoursesActivity.class);
                         startActivity(intent);
                     } else {
                         if(view.getId() == R.id.button_courses_user) {
@@ -67,7 +68,7 @@ public class SecondFragment extends Fragment {
                             startActivity(intent);
                         } else {
                             if(view.getId() == R.id.button_payment_user) {
-                                Intent intent = new Intent(SecondFragment.this.getActivity(), PaymentActivity.class);
+                                Intent intent = new Intent(SecondFragment.this.getActivity(), UserPaymentActivity.class);
                                 startActivity(intent);
                             } else {
                                 if(view.getId() == R.id.button_saved_user) {
@@ -114,6 +115,8 @@ public class SecondFragment extends Fragment {
                                     .placeholder(R.drawable.illustration)
                                     .error(R.drawable.illustration5)
                                     .into(avatar);
+                            DataBinding.setPay_courses(profile.getPay_courses());
+                            DataBinding.setSaved_courses(profile.getSaved_courses());
                         }
                     }
                 });

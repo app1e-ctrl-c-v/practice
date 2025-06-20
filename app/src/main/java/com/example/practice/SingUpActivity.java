@@ -3,6 +3,7 @@ package com.example.practice;
 import static com.example.practice.Models.DataBinding.saveBearerToken;
 import static com.example.practice.Models.DataBinding.saveUuidUser;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -31,6 +32,7 @@ import org.json.JSONObject;
 
 import java.io.IOException;
 import java.lang.reflect.Type;
+import java.time.LocalDate;
 import java.util.List;
 import java.util.regex.Pattern;
 
@@ -73,8 +75,6 @@ public class SingUpActivity  extends AppCompatActivity {
                     name = editTextName.getText().toString();
                 new SingUpTask().execute("");
                 new UpdateProfile().execute("");
-                intent = new Intent(SingUpActivity.this, CoursesActivity.class);
-                    startActivity(intent);
                 } else Toast.makeText(getApplicationContext(), getResources().getText(R.string.error_validation), Toast.LENGTH_LONG).show();
             }
         });
@@ -125,6 +125,7 @@ public class SingUpActivity  extends AppCompatActivity {
             }
         }
 
+        @SuppressLint("NewApi")
         @Override
         protected void onPostExecute(String answer) {
                 try {
@@ -134,7 +135,9 @@ public class SingUpActivity  extends AppCompatActivity {
                     uuidUser = user.getString("id");
                     saveUuidUser(uuidUser);
                     saveBearerToken(bearerToken);
-
+                    Profile.setEmail(email);
+                    intent = new Intent(SingUpActivity.this, CoursesActivity.class);
+                    startActivity(intent);
                 } catch (JSONException e) {
                     throw new RuntimeException(e);
                 }

@@ -34,6 +34,19 @@
         <activity android:name=".ChangePasswordActivity"/>
         <activity android:name=".SearchActivity"/>
         <activity android:name=".CoursesDetailActivity"/>
+        <activity android:name=".CoursesDetailActivity2"/>
+        <activity android:name=".CoursesDetailActivity3"/>
+        <activity android:name=".SaveCoursesActivity"/>
+        <activity android:name=".UserCoursesActivity"/>
+        <activity android:name=".PaymentActivity"/>
+        <activity android:name=".UserPaymentActivity"/>
+        <activity android:name=".ThemesActivity"/>
+        <activity android:name=".LessonsActivity"/>
+        <activity android:name=".TestsActicity"/>
+        <activity android:name=".CommentsActivity"/>
+        <activity android:name=".TestContentActivity"/>
+        <activity android:name=".ResultTestActivity"/>
+
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
