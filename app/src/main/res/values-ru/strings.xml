@@ -82,4 +82,23 @@
     <string name="failed">Тест не сдан</string>
     <string name="write_comment">Написать комментарий...</string>
     <string name="rating">Рейтинг</string>
+    <string name="error_saves1">Курс не сохранен</string>
+    <string name="error_payment1">Нет способа оплаты</string>
+    <string name="error_payment3">Добавлен способ оплаты</string>
+    <string name="error_saved3">Курс был сохранен</string>
+    <string name="error_course1">Курс не найден</string>
+    <string name="error_result1">Поздравления</string>
+    <string name="error_saves2">Попробуйте сохранить курс\n
+еще раз через несколько минут</string>
+    <string name="error_payment2">Нет способа оплаты</string>
+    <string name="error_payment4">Вы можете купить курс сейчас.\n
+Продолжить оплату.</string>
+    <string name="error_saved4">Вы можете найти этот курс в\n
+вашем профиле</string>
+    <string name="error_course2">Попробуйте выполнить поиск курса по\n
+другому ключевому слову</string>
+    <string name="error_result2">Поздравляем с получением\n
+всех правильных ответов!</string>
+    <string name="error_title">Ошибка</string>
+    <string name="error_description">Произошла ошибка</string>
 </resources>

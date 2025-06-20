@@ -36,7 +36,11 @@ public class ResultTestActivity extends AppCompatActivity {
         if((size-correctAnswer)>size/2){
             resultText.setText(getResources().getText(R.string.incorrect_toast)+" "+(size-correctAnswer)+"\n"+getResources().getText(R.string.correct_toast)+" "+correctAnswer+"\n"+getResources().getText(R.string.failed));
         } else{
-            resultText.setText(getResources().getText(R.string.incorrect_toast)+" "+(size-correctAnswer)+"\n"+getResources().getText(R.string.correct_toast)+" "+correctAnswer+"\n"+getResources().getText(R.string.passed));
+            if(size==correctAnswer){
+                resultText.setText(getResources().getText(R.string.error_result2));
+            }else {
+                resultText.setText(getResources().getText(R.string.incorrect_toast)+" "+(size-correctAnswer)+"\n"+getResources().getText(R.string.correct_toast)+" "+correctAnswer+"\n"+getResources().getText(R.string.passed));
+            }
         }
         buttonCancel.setOnClickListener(new View.OnClickListener() {
             @Override

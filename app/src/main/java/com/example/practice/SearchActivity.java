@@ -30,7 +30,8 @@ import java.util.List;
 
 public class SearchActivity extends AppCompatActivity {
     RecyclerView list_corses;
-    TextView numberText;
+    TextView numberText, errorTitle, errorDescription;
+    ImageView errorImage;
     EditText searchCourses;
     CoursesAdapters coursesAdapters;
     List<Courses> coursesList;
@@ -48,6 +49,9 @@ public class SearchActivity extends AppCompatActivity {
         list_corses = findViewById(R.id.courses_list);
         cancelButton = findViewById(R.id.button_cancel);
         numberText = findViewById(R.id.number_title);
+        errorTitle = findViewById(R.id.about_courses_title);
+        errorDescription = findViewById(R.id.description_error);
+        errorImage = findViewById(R.id.courses_illustration);
         context = this;
         try {
             getAllCourses();
@@ -86,6 +90,15 @@ public class SearchActivity extends AppCompatActivity {
                 {
                     coursesAdapters.filter(searchCourses.getText().toString());
                     numberText.setText(""+coursesAdapters.getLength());
+                    if(coursesAdapters.getLength()==0){
+                    errorTitle.setText(getResources().getText(R.string.error_course1));
+                    errorDescription.setText(getResources().getText(R.string.error_course2));
+                    errorImage.setImageResource(R.drawable.illustration12);
+                    } else {
+                        errorTitle.setText("");
+                        errorDescription.setText("");
+                        errorImage.setImageResource(R.drawable.button_discuss);
+                    }
                 }
             }
         });

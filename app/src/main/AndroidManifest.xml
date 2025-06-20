@@ -46,6 +46,7 @@
         <activity android:name=".CommentsActivity"/>
         <activity android:name=".TestContentActivity"/>
         <activity android:name=".ResultTestActivity"/>
+        <activity android:name=".ErrorActivity"/>
 
         <meta-data
             android:name="preloaded_fonts"

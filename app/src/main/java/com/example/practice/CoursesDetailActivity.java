@@ -84,7 +84,9 @@ public class CoursesDetailActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 new AddTask().execute("");
-                buttonAdd.setText(getResources().getText(R.string.button_add_update));
+                intent = new Intent(CoursesDetailActivity.this, ErrorActivity.class);
+                intent.putExtra("error", "Saved");
+                startActivity(intent);
             }
         });
     }
@@ -110,8 +112,12 @@ public class CoursesDetailActivity extends AppCompatActivity {
                     throw new IOException("Unexpected code" + response);
                 return response.body().string();
             } catch (IOException e) {
+                intent = new Intent(CoursesDetailActivity.this, ErrorActivity.class);
+                intent.putExtra("error", "notSaved");
+                startActivity(intent);
                 throw new RuntimeException(e);
             }
+
         }
 
         @Override

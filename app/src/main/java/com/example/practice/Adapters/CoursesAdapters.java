@@ -52,6 +52,7 @@ public class CoursesAdapters extends RecyclerView.Adapter<CoursesAdapters.ViewHo
             courses.clear();
             courses.addAll(copy);
             notifyDataSetChanged();
+
         }
     }
     @SuppressLint("NotifyDataSetChanged")

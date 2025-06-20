@@ -57,14 +57,49 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toRightOf="@+id/button_cancel"/>
 
-
-
+    <FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/name_user_title">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/courses_illustration"
+                android:layout_marginBottom="30dp"
+                android:src="@drawable/button_discuss"
+                android:scaleType="centerCrop"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/rubik_medium"
+                android:textSize="24sp"
+                android:layout_marginTop="20dp"
+                android:textAlignment="center"
+                android:id="@+id/about_courses_title"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/rubik"
+                android:textSize="14sp"
+                android:textColor="@color/accent2"
+                android:textAlignment="center"
+                android:layout_marginBottom="50dp"
+                android:id="@+id/description_error"/>
+        </LinearLayout>
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/courses_list"
         android:layout_width="match_parent"
         android:layout_height="695dp"
-        android:layout_marginTop="25dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/name_user_title" />
+        android:layout_marginTop="25dp" />
+
+</FrameLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

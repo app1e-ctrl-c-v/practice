@@ -81,13 +81,25 @@
     <string name="failed">Test failed</string>
     <string name="write_comment">Write a comment...</string>
     <string name="rating">Raiting</string>
-
-
-
-
-
-
-
-
+    <string name="error_saves1"> Course not saved</string>
+    <string name="error_saves2">Try saving the course
+again in a few minutes</string>
+    <string name="error_payment1">No payment method</string>
+    <string name="error_payment2">You don’t have any\n
+payment method</string>
+    <string name="error_payment3"> Payment method added</string>
+    <string name="error_payment4">You can buy the course now.\n
+Continue to payment.</string>
+    <string name="error_saved3"> Course was saved</string>
+    <string name="error_saved4">You can find this course in\n
+your profile</string>
+    <string name="error_course1"> Course not found</string>
+    <string name="error_course2">Try searching the course with\n
+a different keyword</string>
+    <string name="error_result1">Congratulations</string>
+    <string name="error_result2">Congratulations for getting\n
+all the answers correct!</string>
+    <string name="error_title">Error</string>
+    <string name="error_description">An error occurred</string>
 
 </resources>

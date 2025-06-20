@@ -80,7 +80,8 @@ public class UserPaymentActivity extends AppCompatActivity {
         addButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                intent = new Intent(UserPaymentActivity.this, PaymentActivity.class);
+                intent = new Intent(UserPaymentActivity.this, ErrorActivity.class);
+                intent.putExtra("error", "Payment");
                 startActivity(intent);
             }
         });
@@ -162,6 +163,9 @@ public class UserPaymentActivity extends AppCompatActivity {
                     throw new IOException("Unexpected code" + response);
                 return response.body().string();
             } catch (IOException e) {
+                intent = new Intent(UserPaymentActivity.this, ErrorActivity.class);
+                intent.putExtra("error", "notPayment");
+                startActivity(intent);
                 throw new RuntimeException(e);
             }
         }
